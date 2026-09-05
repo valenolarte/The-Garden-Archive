@@ -1,0 +1,939 @@
+/* =====================================================
+   ÍNDICE
+   1. Fuentes
+   2. Variables de color
+   3. Reset y base
+   4. Pantalla de introducción
+   5. Header
+   6. Menú principal
+   7. Menú desplegable
+   8. Botón hamburguesa
+   9. Inicio / Lobby
+   10. Personajes decorativos del inicio
+   11. Animación de los personajes
+   12. Botones
+   13. Sección tejado
+   14. Visor de imágenes
+   15. Plantas
+   16. Zombies
+   17. Footer final
+   18. Responsive (tablets y móviles)
+===================================================== */
+
+/* =====================================================
+   1. FUENTES
+===================================================== */
+@font-face {
+    font-family: 'houseofterrorregular';
+    src: url('../fonts/houseofterror_regular-webfont.woff2') format('woff2'),
+        url('../fonts/houseofterror_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lilita_oneregular';
+    src: url('../lilitaone-regular-webfont.woff2') format('woff2'),
+        url('../lilitaone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =====================================================
+   2. VARIABLES DE COLOR
+===================================================== */
+:root {
+    --azul: #285d7d;
+    --verde-claro: #57c995;
+    --verde-oscuro: #087c2d;
+    --blanco: #ffffff;
+    --negro: #111111;
+}
+
+/* =====================================================
+   3. RESET Y BASE
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Dosis";
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* =====================================================
+   4. PANTALLA DE INTRODUCCIÓN
+===================================================== */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    opacity: 1;
+    transition: opacity 1.2s ease;
+}
+
+.intro-animacion {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-animacion img {
+    width: 350px;
+    height: auto;
+    display: block;
+}
+
+.intro-titulo {
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 1s ease;
+}
+
+.intro-titulo h1 {
+    color: white;
+    font-size: 145px;
+    font-family: 'houseofterrorregular';
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Estados de la intro */
+#intro.mostrar-titulo .intro-animacion {
+    opacity: 0;
+}
+
+#intro.mostrar-titulo .intro-titulo {
+    opacity: 1;
+}
+
+#intro.ocultar {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* =====================================================
+   5. HEADER
+===================================================== */
+header {
+    background-image: url("../img/pasto.jpg");
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+}
+
+.logo {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* =====================================================
+   6. MENÚ PRINCIPAL
+===================================================== */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu a,
+.boton-menu {
+    color: var(--blanco);
+    font-family: "Lilita One", sans-serif;
+    font-size: inherit;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.boton-menu:hover {
+    background-color: var(--verde-claro);
+    color: var(--negro);
+}
+
+/* =====================================================
+   7. MENÚ DESPLEGABLE
+===================================================== */
+.menu-desplegable {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--azul);
+    min-width: 180px;
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+}
+
+.submenu a {
+    display: block;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 10px;
+}
+
+.menu-desplegable:hover .submenu {
+    display: block;
+}
+
+.submenu a:hover {
+    background-color: var(--verde-claro);
+    color: var(--negro);
+}
+
+/* =====================================================
+   8. BOTÓN HAMBURGUESA
+===================================================== */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    color: var(--blanco);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* =====================================================
+   9. INICIO / LOBBY
+===================================================== */
+.inicio {
+    position: relative;
+    overflow: hidden;
+    min-height: 700px;
+    background-image: url(../img/tejado.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'houseofterrorregular';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.inicio-contenido {
+    max-width: 800px;
+}
+
+.inicio h1 {
+    font-size: clamp(114px, 7vw, 80px);
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.inicio p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* =====================================================
+   10. PERSONAJES DECORATIVOS DEL INICIO
+===================================================== */
+.personajes-izquierda,
+.personajes-derecha {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 500px;
+    pointer-events: none;
+}
+
+.personajes-izquierda {
+    left: 0;
+}
+
+.personajes-derecha {
+    right: 0;
+}
+
+.personajes-izquierda img,
+.personajes-derecha img {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+}
+
+/* Plantas: tamaño, posición y estado inicial (oculto) */
+.planta1 {
+    width: 430px;
+    left: -100px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(-250px);
+    animation: entrarPlanta1 1.2s ease-out forwards;
+}
+
+.planta2 {
+    width: 340px;
+    left: 180px;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(-300px);
+    animation: entrarPlanta1 1.2s ease-out forwards;
+}
+
+/* Zombies: tamaño, posición y estado inicial (oculto) */
+.zombie1 {
+    width: 360px;
+    right: -50px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(250px);
+    animation: entrarZombie1 1.2s ease-out forwards;
+}
+
+.zombie2 {
+    width: 250px;
+    right: 180px;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(300px);
+    animation: entrarZombie1 1.2s ease-out forwards;
+}
+
+/* =====================================================
+   11. ANIMACIÓN DE LOS PERSONAJES
+===================================================== */
+@keyframes entrarPlanta1 {
+    from {
+        transform: translateX(-250px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entrarPlanta2 {
+    from {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entrarZombie1 {
+    from {
+        transform: translateX(250px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entrarZombie2 {
+    from {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* =====================================================
+   12. BOTONES
+===================================================== */
+.boton {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}
+
+.boton-redireccion {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6b9e32;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+    margin-top: 70px;
+    font-family: "Dosis";
+}
+
+.boton-redireccion:hover {
+    transform: scale(1.05);
+}
+
+/* =====================================================
+   13. SECCIÓN TEJADO
+===================================================== */
+.tejado-section {
+    width: 100%;
+    padding: 40px 5%;
+    box-sizing: border-box;
+}
+
+.tejado-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.tejado-texto {
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.tejado-texto p {
+    margin: 0;
+}
+
+.tejado-imagen-principal img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.tejado-imagenes-abajo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 45px;
+}
+
+.tejado-imagenes-abajo img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.tejado-imagen-principal img:hover,
+.tejado-imagenes-abajo img:hover {
+    transform: scale(1.03);
+}
+
+.verde-titulo {
+    color: #6b9e32;
+}
+
+/* =====================================================
+   14. VISOR DE IMÁGENES
+===================================================== */
+.visor-imagen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.visor-imagen img {
+    max-width: 95%;
+    max-height: 95vh;
+    object-fit: contain;
+    animation: aparecerImagen 0.3s ease;
+}
+
+.cerrar-visor {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.cerrar-visor:hover {
+    transform: scale(1.2);
+}
+
+@keyframes aparecerImagen {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =====================================================
+   15. PLANTAS
+===================================================== */
+.plantas-noche {
+    width: 90%;
+    max-width: 870px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.plantas-noche h2 {
+    margin-bottom: 25px;
+    font-size: 50px;
+    font-family: "Lilita One", sans-serif;
+}
+
+.plantas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.plantas-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =====================================================
+   16. ZOMBIES
+===================================================== */
+.zombies-noche {
+    width: 90%;
+    max-width: 870px;
+    margin: 60px auto;
+    padding-top: 30px;
+    text-align: center;
+    border-top: 2px solid #333;
+}
+
+.zombies-noche h2 {
+    margin-bottom: 25px;
+    font-size: 50px;
+    font-family: "Lilita One", sans-serif;
+}
+
+.zombies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.zombies-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =====================================================
+   17. FOOTER FINAL - PLANTS VS ZOMBIES
+===================================================== */
+.bottom-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-section .collage {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.pvz-footer {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 35px 20px;
+    background: #5ca904;
+    background-color: #5ca904;
+    color: #ffffff;
+    text-align: center;
+}
+
+.pvz-footer-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.pvz-footer-info {
+    width: auto;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.pvz-footer-info p {
+    display: block;
+    margin: 6px 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Dosis", sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.pvz-footer-title {
+    display: block;
+    margin: 0 0 8px 0;
+    padding: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.pvz-footer-images {
+    width: 100%;
+    height: auto;
+    margin: 12px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pvz-footer-images img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+}
+
+.pvz-footer-button {
+    display: inline-block;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    color: #5ca904;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.pvz-footer-button:hover {
+    background-color: #222222;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   18. RESPONSIVE (TABLETS Y MÓVILES)
+===================================================== */
+
+/* ---------------------------------------------------
+   18.1 TABLETS VERTICALES / MÓVILES GRANDES (hasta 768px)
+--------------------------------------------------- */
+@media (max-width: 768px) {
+    /* ---- Header en móvil ---- */
+    .menu-icon {
+        display: block;
+    }
+
+    /* ---- Menú principal móvil ---- */
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--azul);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 15px 20px;
+        gap: 5px;
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .menu a,
+    .boton-menu {
+        width: 100%;
+        text-align: center;
+        display: block;
+        padding: 14px 20px;
+    }
+
+    /* ---- Menú desplegable ---- */
+    .menu-desplegable {
+        width: 100%;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        padding: 5px 10px;
+        margin-top: 5px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        display: none;
+    }
+
+    .menu-desplegable:focus-within .submenu {
+        display: block;
+    }
+
+    .submenu a {
+        width: 100%;
+        text-align: center;
+        display: block;
+        padding: 12px;
+    }
+
+    /* Inicio / lobby */
+    .inicio {
+        min-height: 500px;
+        padding: 30px 20px;
+    }
+
+    .personajes-izquierda,
+    .personajes-derecha {
+        width: 130px;
+        height: 220px;
+    }
+
+    .planta1 {
+        width: 260px;
+    }
+
+    .zombie1 {
+        width: 220px;
+    }
+
+    .planta2 {
+        width: 200px;
+        left: 120px;
+    }
+
+    .zombie2 {
+        width: 130px;
+    }
+
+    /* Imágenes de la sección noche */
+    .noche-derecha img {
+        height: 260px;
+    }
+
+    /* Grids de plantas y zombies */
+    .plantas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zombies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .plantas-noche h2,
+    .zombies-noche h2 {
+        font-size: 34px;
+    }
+
+    /* Footer */
+    .pvz-footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Sección tejado */
+    .tejado-contenido {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .tejado-imagen-principal img {
+        height: 280px;
+    }
+
+    .tejado-imagenes-abajo {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .tejado-imagenes-abajo img {
+        height: 140px;
+    }
+}
+
+/* ---------------------------------------------------
+   18.2 MÓVILES (hasta 480px)
+--------------------------------------------------- */
+@media (max-width: 480px) {
+    header {
+        padding: 0 4%;
+    }
+
+    header img {
+        width: 90px;
+    }
+
+    .intro-titulo h1 {
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+
+    .intro-animacion img {
+        width: 160px;
+    }
+
+    .planta1 {
+        width: 190px;
+    }
+
+    .zombie1 {
+        width: 160px;
+    }
+
+    .planta2 {
+        width: 130px;
+        left: 90px;
+    }
+
+    .zombie2 {
+        width: 100px;
+        right: 70px;
+    }
+
+    .noche-imagenes,
+    .noche-galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .noche-derecha img {
+        height: 200px;
+    }
+
+    .plantas-grid,
+    .zombies-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .boton-redireccion {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pvz-footer-images img {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    /* Sección tejado */
+    .tejado-section {
+        padding: 30px 20px;
+    }
+
+    .tejado-texto {
+        font-size: 18px;
+    }
+
+    .tejado-imagen-principal img {
+        height: 220px;
+    }
+
+    .tejado-imagenes-abajo {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tejado-imagenes-abajo img {
+        height: 200px;
+    }
+}
