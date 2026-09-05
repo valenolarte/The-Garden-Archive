@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Garden Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tienda.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         CABEZOTE / NAVEGACIÓN
+    ========================== -->
+
+    <header class="header">
+
+        <a href="inicio.html" class="logo">
+            <img src="img/logo.png">
+        </a>
+
+        <!-- Botón hamburguesa -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            ☰
+        </label>
+
+        <nav class="menu">
+            <!--Personajes-->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Personajes</button>
+
+                <div class="submenu">
+
+                    <a href="enciclopedia-plantas.html">Plantas</a>
+                    <a href="enciclopedia-zombi.html">Zombies</a>
+
+                </div>
+
+            </div>
+
+            <!-- NIVELES -->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Niveles</button>
+
+                <div class="submenu">
+
+                    <a href="dia.html">Día</a>
+                    <a href="noche.html">Noche</a>
+                    <a href="piscina.html">Piscina</a>
+                    <a href="tejado.html">Tejado</a>
+
+                </div>
+
+            </div>
+
+            <a href="galeria.html">Galería</a>
+
+            <!--guia-->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Guía</button>
+
+                <div class="submenu">
+
+                    <a href="consejos.html">Consejos</a>
+                    <a href="tiendadedave.html">Tienda de Dave</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- =========================
+             INICIO / LOBBY
+        ========================== -->
+
+        <section id="inicio" class="inicio">
+
+            <!-- PERSONAJES DECORATIVOS -->
+
+            <div class="personajes-izquierda">
+
+                <img src="img/dave.png" class="planta planta1">
+
+            </div>
+
+            <div class="personajes-derecha">
+
+                <img src="img/dave2.png" class="zombie1">
+
+            </div>
+
+
+            <!-- TÍTULO -->
+
+            <div class="inicio-contenido">
+
+                <h1>TIENDA DE CRAZY DAVE</h1>
+
+            </div>
+
+        </section>
+
+        <section class="seccion-historia">
+
+            <!-- IMAGEN GRANDE IZQUIERDA -->
+            <div class="historia-imagen-principal">
+                <img src="img/tienda/crazy-dave.gif" alt="Crazy Dave">
+            </div>
+
+
+            <!-- CONTENIDO DERECHO -->
+            <div class="historia-contenido">
+
+                <p>La tienda de Crazy Dave funciona como el sistema central de compras y progreso dentro de Plants vs.
+                    Zombies. Esta mecánica se habilita tras completar el nivel 3-4 del Modo Aventura y opera
+                    directamente desde el maletero de su características auto verde estacionado en la entrada.</p>
+                <p>La economía del juego se basa en recolectar las monedas que caen al derrotar zombis para
+                    intercambiarlas por mejoras estratégicas. Entre los artículos más importantes destacan la expansión
+                    de la barra de semillas hasta diez ranuras y la adquisición de defensas de emergencia para los
+                    escenarios, como los cortacéspedes de tejado o el rastrillo.</p>
+                <p>El catálogo ofrece además plantas exclusivas de mejora que no se consiguen de otra forma y deben
+                    colocarse sobre plantas convencionales durante las batallas, tales como la Metrallaguisante o la
+                    Imitadora. Así mismo, la tienda abastece la jugabilidad del Jardín Zen al vender fertilizantes,
+                    herramientas de cuidado y a la mascota Stinky para automatizar la recolección de dinero.</p>
+                <p>Todo el flujo de compra está completamente integrado con el humor absurdo de la saga, donde
+                    interacciones cómicas (como comprar un taco misterioso para entregárselo a Dave) sirven para
+                    expandir la mercancía disponible. Esta dinámica de gestión se complementa con una ambientación única
+                    marcada por la música relajante de Laura Shigihara.</p>
+                <p>Más allá de las herramientas básicas, el maletero de Dave guarda una selección exclusiva de
+                    vegetación avanzada. Estas cartas especiales no se plantan de forma directa, sino que funcionan como
+                    “evoluciones” que se colocan encima de tus plantas defensivas para llevar tu poder de ataque al
+                    máximo.</p>
+            </div>
+
+        </section>
+
+        <!-- =========================
+             PLANTAS
+        ========================== -->
+
+        <section class="plantas-noche">
+
+            <h2><span class="verde-titulo">PLANTAS </span>DE LA TIENDA</h2>
+
+            <div class="plantas-grid">
+                <img src="img/tienda/birasol.png" alt="birasol">
+                <img src="img/tienda/guisantralladora.png" alt="guisantralladora">
+                <img src="img/tienda/gasoseta.png" alt="gasoseta">
+                <img src="img/tienda/rabodegato.png" alt="rabodegato">
+
+                <img src="img/tienda/dorada.png" alt="magnetoseta dorada">
+                <img src="img/tienda/pinchorroca.png" alt="pinchorroca">
+                <img src="img/tienda/melonpultacongelada.png" alt="melonpultacongelada">
+                <img src="img/tienda/mazorcanon.png" alt="mazorcañon">
+
+                <img src="img/tienda/imitadora.png" alt="Imitadora">
+            </div>
+
+            <a href="enciclopedia-plantas.html" class="boton-redireccion">Quiero saber más de ellas</a>
+
+        </section>
+
+        <section class="seccion-info">
+
+            <!-- Título principal -->
+            <h2 class="seccion-titulo">
+                ÁRBOL DE LA <span class="verde-titulo">SABIDURÍA</span>
+            </h2>
+
+            <!-- Contenido de dos columnas -->
+            <div class="seccion-contenido">
+
+                <!-- Columna izquierda -->
+                <div class="seccion-texto">
+
+                    <p>
+                        El Árbol de la Sabiduría (Tree of Wisdom) es un elemento único del Jardín Zen y
+                        comenzar a hacerlo crecer, debes cumplir con las siguientes mecánicas:
+                        Compra inicial: Disponible en la tienda de Crazy Dave por $10.000 monedas
+                        (requiere haber desbloqueado el Jardín Zen previamente).
+                        Crecimiento: Crece 1 pie por cada bolsa de Abono para Árbol que consume.
+                        Costo de mantenimiento: Cada bolsa de abono se compra en la tienda por
+                        $2.500 monedas.
+                    </p>
+
+                    <h3>Códigos secretos y Trucos desbloqueables</h3>
+
+                    <p>
+                        Al alcanzar ciertas alturas clave, el árbol revela comandos especiales que se
+                        pueden tipear directamente en el teclado durante cualquier partida:
+                    </p>
+
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="seccion-imagen">
+                    <img src="img/tienda/sabiduria.png" alt="Árbol de la Sabiduría">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="curiosidades">
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+                    <img src="img/tienda/podadora.jpg" alt="Podadora">
+                    <h3>Trickedout</h3>
+                    <p>
+                        Mejora o cambia tu podadora de césped, por otra mejor.(Cualquier metro en el árbol de la
+                        sabiduría)
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/tienda/mustacho.jpg" alt="mostacho">
+                    <h3>Moustache</h3>
+                    <p>
+                        Pone bigotes a los zombis.(Cualquier metro en el árbol de la sabiduría)
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="img/tienda/gafas.jpg" alt="gafas">
+                    <h3>Future</h3>
+                    <p>
+                        Pone Lentes futuristas a los zombis. (Cualquier metro en el árbol de la sabiduría)
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="seccion-historia2">
+
+            <h2 class="historia-titulo">EL ÁRBOL Y SUS <span class="verde-titulo">SECRETOS</span></h2>
+
+            <div class="historia-contenedor">
+
+                <!-- IMAGEN -->
+                <div class="historia-imagen2">
+                    <img src="img/tienda/Tree.jpg" alt="Árbol">
+                </div>
+
+                <!-- TEXTO -->
+                <div class="historia-contenido">
+                    <p>
+                        A lo largo de su crecimiento, el árbol comparte más de 80 diálogos
+                        útiles para el jugador:
+
+                    </p>
+                    <P><strong>Tácticas contra zombies:</strong> Detalla el daño de plantas explosivas y
+                        advierte sobre enemigos resistentes como los Zombistein.
+                    </P>
+                    <p><strong>Farmeo en Jardín Zen:</strong> Explica la probabilidad de obtención de plantas
+                        especiales según el modo de juego (piscina, niebla, tejado, etc.).
+                    </P>
+                    <p><strong>Easter Eggs:</strong> Enseña secretos interactivos del menú principal y de la
+                        pantalla de logros.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =====================================================
+         COLLAGE + FOOTER
+    ====================================================== -->
+
+    <section class="bottom-section">
+
+        <img src="img/collage.png" alt="Collage de Plants vs. Zombies" class="collage">
+
+        <footer class="pvz-footer">
+
+            <div class="pvz-footer-container">
+
+                <div class="pvz-footer-info">
+
+                    <p class="pvz-footer-title">
+                        The Garden Archive
+                    </p>
+
+                    <p>
+                        Proyecto académico
+                    </p>
+
+                    <div class="pvz-footer-images">
+
+                        <img src="img/dani.png" alt="Logo Dani">
+
+                        <img src="img/valen.png" alt="Logo Valen">
+
+                    </div>
+
+                    <p>
+                        Plants vs. Zombies © PopCap Games / Electronic Arts.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Este proyecto es de carácter académico y no comercial.
+                        </strong>
+                    </p>
+
+                </div>
+
+                <a href="pvz2.html" class="pvz-footer-button" target="_blank" rel="noopener noreferrer">
+                    Plantas vs. Zombies 2
+                </a>
+
+            </div>
+
+        </footer>
+
+    </section>
+
+    <div id="visor-imagen" class="visor-imagen">
+
+        <span class="cerrar-visor">&times;</span>
+
+        <img id="imagen-grande" src="" alt="Vista ampliada">
+
+    </div>
+    <script src="js/tienda.js"></script>
+
+</body>
+
+</html>

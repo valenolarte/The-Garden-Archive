@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Garden Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         PANTALLA DE INTRODUCCIÓN
+    ================================== -->
+
+    <div id="intro">
+
+        <!-- Animación GIF -->
+        <div class="intro-animacion">
+            <img src="img/intro.gif" alt="The Garden Archive">
+        </div>
+
+
+        <!-- Nombre de la página -->
+        <div class="intro-titulo">
+            <h1>The Garden Archive</h1>
+        </div>
+
+    </div>
+
+    <!-- =========================
+         CABEZOTE / NAVEGACIÓN
+    ========================== -->
+
+    <header class="header">
+
+        <a href="inicio.html" class="logo">
+            <img src="img/logo.png">
+        </a>
+
+        <!-- Botón hamburguesa -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            ☰
+        </label>
+
+        <nav class="menu">
+            <!--Personajes-->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Personajes</button>
+
+                <div class="submenu">
+
+                    <a href="enciclopedia-plantas.html">Plantas</a>
+                    <a href="enciclopedia-zombi.html">Zombies</a>
+
+                </div>
+
+            </div>
+
+            <!-- NIVELES -->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Niveles</button>
+
+                <div class="submenu">
+
+                    <a href="dia.html">Día</a>
+                    <a href="noche.html">Noche</a>
+                    <a href="piscina.html">Piscina</a>
+                    <a href="tejado.html">Tejado</a>
+
+                </div>
+
+            </div>
+
+            <a href="galeria.html">Galería</a>
+
+            <!--guia-->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Guía</button>
+
+                <div class="submenu">
+
+                    <a href="consejos.html">Consejos</a>
+                    <a href="tiendadedave.html">Tienda de Dave</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             INICIO / LOBBY
+        ========================== -->
+
+        <section id="inicio" class="inicio">
+
+            <!-- PERSONAJES DECORATIVOS -->
+
+            <div class="personajes-izquierda">
+
+                <img src="img/plantas/1lansaguisantes.png" class="planta planta1">
+                <img src="img/plantas/34lanzamaiz.png" class="planta planta2">
+                <img src="img/plantas/21jalapeno.png" class="planta planta3">
+
+
+            </div>
+
+
+            <div class="personajes-derecha">
+
+                <img src="img/personajes/20yeti.png" class="zombie zombie1">
+                <img src="img/personajes/5balde.png" class="zombie zombie2">
+
+            </div>
+
+
+            <!-- TÍTULO -->
+
+            <div class="inicio-contenido">
+
+                <h1>THE GARDEN ARCHIVE</h1>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- =========================
+             HISTORIA
+        ========================== -->
+
+        <section class="seccion-principal">
+
+            <div class="contenido-superior">
+
+                <!-- LADO IZQUIERDO -->
+                <div class="contenido-texto">
+
+                    <h1>BIENVENIDO <span>AL JARDÍN</span></h1>
+
+                    <p>
+                        Todo comenzó con una idea tan sencilla como peculiar: ¿qué pasaría si unas
+                        plantas fueran las encargadas de defender una casa de una invasión zombi? De
+                        esta premisa nació Plants vs. Zombies, un juego creado por PopCap Games que
+                        convirtió un jardín común en un divertido campo de batalla.
+                        Pero detrás de cada planta y cada zombi también existe una historia. Desde las
+                        ideas que dieron forma al juego hasta el universo que conocemos hoy, descubre
+                        cómo nació este peculiar enfrentamiento y qué hizo que se convirtiera en un
+                        clásico.
+                    </p>
+
+                    <a href="historia.html" class="boton-redireccion">
+                        Conoce la historia completa
+                    </a>
+
+                </div>
+
+
+                <!-- LADO DERECHO -->
+                <div class="contenido-imagen">
+
+                    <img src="img/personajes/6periodico-thumb.png" alt="Personaje Plants vs Zombies">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             REVISTA INTERACTIVA
+        ========================== -->
+
+        <section class="revista">
+
+            <h2>PLANTARITY</h2>
+
+            <div class="revista-contenido">
+
+                <iframe allowfullscreen="allowfullscreen" allow="autoplay; fullscreen; clipboard-write" scrolling="no"
+                    class="fp-iframe" src="https://heyzine.com/flip-book/4427ae0161.html">
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+
+    <!-- =====================================================
+         COLLAGE + FOOTER
+    ====================================================== -->
+
+    <section class="bottom-section">
+
+        <img src="img/collage.png" alt="Collage de Plants vs. Zombies" class="collage">
+
+        <footer class="pvz-footer">
+
+            <div class="pvz-footer-container">
+
+                <div class="pvz-footer-info">
+
+                    <p class="pvz-footer-title">
+                        The Garden Archive
+                    </p>
+
+                    <p>
+                        Proyecto académico
+                    </p>
+
+                    <div class="pvz-footer-images">
+
+                        <img src="img/dani.png" alt="Logo Dani">
+
+                        <img src="img/valen.png" alt="Logo Valen">
+
+                    </div>
+
+                    <p>
+                        Plants vs. Zombies © PopCap Games / Electronic Arts.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Este proyecto es de carácter académico y no comercial.
+                        </strong>
+                    </p>
+
+                </div>
+
+                <a href="pvz2.html" class="pvz-footer-button" target="_blank" rel="noopener noreferrer">
+                    Plantas vs. Zombies 2
+                </a>
+
+            </div>
+
+        </footer>
+
+    </section>
+
+    <script src="js/intro.js"></script>
+
+</body>
+
+</html>

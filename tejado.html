@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Garden Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tejado.css">
+</head>
+
+<body>
+    <!-- =========================
+         CABEZOTE / NAVEGACIÓN
+    ========================== -->
+
+    <header class="header">
+
+        <a href="inicio.html" class="logo">
+            <img src="img/logo.png">
+        </a>
+
+        <!-- Botón hamburguesa -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            ☰
+        </label>
+
+        <nav class="menu">
+            <!--Personajes-->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Personajes</button>
+
+                <div class="submenu">
+
+                    <a href="enciclopedia-plantas.html">Plantas</a>
+                    <a href="enciclopedia-zombi.html">Zombies</a>
+
+                </div>
+
+            </div>
+
+            <!-- NIVELES -->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Niveles</button>
+
+                <div class="submenu">
+
+                    <a href="dia.html">Día</a>
+                    <a href="noche.html">Noche</a>
+                    <a href="piscina.html">Piscina</a>
+                    <a href="tejado.html">Tejado</a>
+
+                </div>
+
+            </div>
+
+            <a href="galeria.html">Galería</a>
+
+            <!--guia-->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Guía</button>
+
+                <div class="submenu">
+
+                    <a href="consejos.html">Consejos</a>
+                    <a href="tiendadedave.html">Tienda de Dave</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+    <main>
+        <!-- =========================
+             INICIO / LOBBY
+        ========================== -->
+
+        <section id="inicio" class="inicio">
+
+            <!-- PERSONAJES DECORATIVOS -->
+
+            <div class="personajes-izquierda">
+
+                <img src="img/plantas/39melonpulta.png" class="planta planta1">
+                <img src="img/plantas/37paraplanta.png" class="planta planta2">
+
+            </div>
+
+
+            <div class="personajes-derecha">
+
+                <img src="img/personajes/22escalera.png" class="zombie zombie1">
+                <img src="img/personajes/25enano.png" class="zombie zombie2">
+
+            </div>
+
+
+            <!-- TÍTULO -->
+
+            <div class="inicio-contenido">
+
+                <h1>TEJADO</h1>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             TEXTO
+        ========================== -->
+
+        <section class="tejado-section">
+
+            <div class="tejado-contenido">
+
+                <!-- Texto -->
+                <div class="tejado-texto">
+                    <p>
+                        La aventura del Tejado se desarrolla en el tejado de la casa del
+                        jugador, eliminando cualquier césped y requiriendo que las plantas se
+                        coloquen sobre macetas. Además, el tejado tiene una inclinación que
+                        bloquea los proyectiles rectos de la tercera columna y anteriores, lo
+                        que motiva el uso de plantas catapultas. También presenta su propia
+                        mecánica de emboscada, con zombies bungee que descienden del cielo para
+                        dejar caer zombies aleatorios sobre el tablero en cada oleada final si
+                        no se contrarrestan con la hoja paraguas. Esta fase suele desarrollarse
+                        durante el día, pero algunos niveles especiales, como la batalla contra
+                        el jefe 5-10 contra el Dr. Zomboss, tienen lugar de noche, conocida como
+                        Tejado Nocturno. La música que suena principalmente en esta fase es
+                        "Graze the Roof".
+                    </p>
+                </div>
+
+                <!-- Imagen grande -->
+                <div class="tejado-galeria tejado-imagen-principal">
+                    <img src="img/tejado/tejado1.jpg" alt="Tejado de Plants vs Zombies">
+                </div>
+
+            </div>
+
+
+            <!-- Tres imágenes inferiores -->
+            <div class="tejado-galeria tejado-imagenes-abajo">
+
+                <img src="img/tejado/tejado2.jpg" alt="Nivel del tejado">
+
+                <img src="img/tejado/tejado3.jpg" alt="Plantas en el tejado">
+
+                <img src="img/tejado/tejado4.jpg" alt="Zombies en el tejado">
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PLANTAS
+        ========================== -->
+
+        <section class="plantas-noche">
+
+            <h2><span class="verde-titulo">PLANTAS</span> DE ESTE NIVEL</h2>
+
+            <div class="plantas-grid">
+                <img src="img/tejado/maceta.png" alt="maceta">
+                <img src="img/tejado/lanzamaiz.png" alt="lanzamaiz">
+                <img src="img/tejado/granodecafe.png" alt="grano de café">
+                <img src="img/tejado/ajo.png" alt="ajo">
+
+                <img src="img/tejado/paraplanta.png" alt="paraplanta">
+                <img src="img/tejado/margarita.png" alt="margarita">
+                <img src="img/tejado/melonpulta.png" alt="melonpulta">
+            </div>
+
+            <a href="enciclopedia-plantas.html" class="boton-redireccion">Quiero saber más de ellas</a>
+
+        </section>
+
+        <!-- =========================
+             ZOMBIES
+        ========================== -->
+
+        <section class="zombies-noche">
+
+            <h2><span class="verde-titulo">ZOMBIES</span> DE ESTE NIVEL</h2>
+
+            <div class="zombies-grid">
+                <img src="img/tejado/colgao.png" alt="Zombie colgao">
+                <img src="img/tejado/escalador.png" alt="Zombie escalador">
+                <img src="img/tejado/zombipulta.png" alt="zombipulta">
+                <img src="img/tejado/zombistein.png" alt="zombistein">
+                <img src="img/tejado/zombidito.png" alt="zombidito">
+
+                <img src="img/tejado/dr-zombi.png" alt="dr-zombi">
+            </div>
+
+            <a href="enciclopedia-zombi.html" class="boton-redireccion">Quiero saber más de ellos</a>
+
+        </section>
+
+
+
+        </div>
+
+    </main>
+
+    <!-- =====================================================
+         COLLAGE + FOOTER
+    ====================================================== -->
+
+    <section class="bottom-section">
+
+        <img src="img/collage.png" alt="Collage de Plants vs. Zombies" class="collage">
+
+        <footer class="pvz-footer">
+
+            <div class="pvz-footer-container">
+
+                <div class="pvz-footer-info">
+
+                    <p class="pvz-footer-title">
+                        The Garden Archive
+                    </p>
+
+                    <p>
+                        Proyecto académico
+                    </p>
+
+                    <div class="pvz-footer-images">
+
+                        <img src="img/dani.png" alt="Logo Dani">
+
+                        <img src="img/valen.png" alt="Logo Valen">
+
+                    </div>
+
+                    <p>
+                        Plants vs. Zombies © PopCap Games / Electronic Arts.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Este proyecto es de carácter académico y no comercial.
+                        </strong>
+                    </p>
+
+                </div>
+
+                <a href="pvz2.html" class="pvz-footer-button" target="_blank" rel="noopener noreferrer">
+                    Plantas vs. Zombies 2
+                </a>
+
+            </div>
+
+        </footer>
+
+    </section>
+
+    <div class="visor-imagen" id="visor-imagen">
+
+        <span class="cerrar-visor">&times;</span>
+
+        <img id="imagen-grande" src="" alt="Imagen ampliada">
+
+    </div>
+
+    <script src="js/tejado.js"></script>
+
+</body>
+
+</html>

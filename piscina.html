@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Garden Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/piscina.css">
+</head>
+
+<body>
+    <!-- =========================
+         CABEZOTE / NAVEGACIÓN
+    ========================== -->
+
+    <header class="header">
+
+        <a href="inicio.html" class="logo">
+            <img src="img/logo.png">
+        </a>
+
+        <!-- Botón hamburguesa -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            ☰
+        </label>
+
+        <nav class="menu">
+            <!--Personajes-->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Personajes</button>
+
+                <div class="submenu">
+
+                    <a href="enciclopedia-plantas.html">Plantas</a>
+                    <a href="enciclopedia-zombi.html">Zombies</a>
+
+                </div>
+
+            </div>
+
+            <!-- NIVELES -->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Niveles</button>
+
+                <div class="submenu">
+
+                    <a href="dia.html">Día</a>
+                    <a href="noche.html">Noche</a>
+                    <a href="piscina.html">Piscina</a>
+                    <a href="tejado.html">Tejado</a>
+
+                </div>
+
+            </div>
+
+            <a href="galeria.html">Galería</a>
+
+            <!--guia-->
+            <div class="menu-desplegable">
+
+                <button class="boton-menu" type="button">Guía</button>
+
+                <div class="submenu">
+
+                    <a href="consejos.html">Consejos</a>
+                    <a href="tiendadedave.html">Tienda de Dave</a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+    <main>
+        <!-- =========================
+             INICIO / LOBBY
+        ========================== -->
+
+        <section id="inicio" class="inicio">
+
+            <!-- PERSONAJES DECORATIVOS -->
+
+            <div class="personajes-izquierda">
+
+                <img src="img/piscina/25marseta.png" class="planta planta2">
+                <img src="img/piscina/24cascarabias.png" class="planta planta1">
+
+            </div>
+
+
+            <div class="personajes-derecha">
+
+                <img src="img/piscina/16jack.png" class="zombie zombie1">
+                <img src="img/piscina/12nadador.png" class="zombie zombie2">
+
+            </div>
+
+
+            <!-- TÍTULO -->
+
+            <div class="inicio-contenido">
+
+                <h1>PISCINA</h1>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             TEXTO
+        ========================== -->
+
+        <section class="piscina-seccion">
+
+            <div class="piscina-galeria">
+
+                <div class="piscina-imagen-principal">
+                    <img src="img/piscina/img2.jpg" alt="Piscina de Plants vs Zombies">
+                </div>
+
+                <div class="piscina-imagen-secundaria">
+                    <img src="img/piscina/img3.jpg" alt="Tablero de la piscina">
+                </div>
+
+                <div class="piscina-imagen-secundaria">
+                    <img src="img/piscina/img4.jpg" alt="Elementos de la piscina">
+                </div>
+
+            </div>
+
+            <div class="piscina-texto">
+
+                <p>
+                    La aventura de la Piscina se desarrolla en el patio trasero del jugador, durante el
+                    día, para que el sol vuelva a brillar. Sin embargo, la cuadrícula cambia a 9x6, con
+                    las dos filas centrales ocupadas por una piscina. Esta piscina restringe qué
+                    plantas se pueden colocar dentro, por lo que el nenúfar es una planta útil que
+                    permite colocar la mayoría de las demás plantas encima. Lo mismo ocurre con
+                    los zombies: solo algunos pueden entrar en la piscina con la ayuda de un tubo o
+                    un flotador de patito, estos son zombies con cambios exclusivos de la piscina.
+                </p>
+
+                <p>
+                    Además, aunque ya no hay tumbas, los zombies emergerán de las
+                    profundidades de la piscina para emboscar a las plantas en cada oleada final.
+                    Las cortadoras de césped se hundirán en la piscina una vez activadas, por lo
+                    que se pueden comprar limpiadores de piscina para reemplazarlas. La música
+                    que suena principalmente en esta fase es "Watery Graves".
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =========================
+             PLANTAS
+        ========================== -->
+
+        <section class="plantas-noche">
+
+            <h2><span class="verde-titulo">PLANTAS</span> DE ESTE NIVEL</h2>
+
+            <div class="plantas-grid">
+                <img src="img/piscina/apisonaflor.png" alt="apisonaflor">
+                <img src="img/piscina/tripitidora.png" alt="tripitidora">
+                <img src="img/piscina/zampalga.png" alt="zampalga">
+                <img src="img/piscina/jalapeno.png" alt="jalapeno">
+
+                <img src="img/piscina/pinchohierba.png" alt="pinchohierba">
+                <img src="img/piscina/plantorcha.png" alt="plantorcha">
+                <img src="img/piscina/cascarabias.png" alt="cascarabias">
+                <img src="img/piscina/marseta.png" alt="marseta">
+            </div>
+
+            <a href="enciclopedia-plantas.html" class="boton-redireccion">Quiero saber más de ellas</a>
+
+        </section>
+
+        <!-- =========================
+             ZOMBIES
+        ========================== -->
+
+        <section class="zombies-noche">
+
+            <h2><span class="verde-titulo">ZOMBIES</span> DE ESTE NIVEL</h2>
+
+            <div class="zombies-grid">
+                <img src="img/piscina/playero.png" alt="Zombie playero">
+                <img src="img/piscina/buzo.png" alt="Zombie buzo">
+                <img src="img/piscina/zombictor.png" alt="Zombictor">
+                <img src="img/piscina/bobsleigh.png" alt="Zombie bobsleigh">
+                <img src="img/piscina/delfin.png" alt="Zombie con delfin">
+            </div>
+
+            <a href="enciclopedia-zombi.html" class="boton-redireccion">Quiero saber más de ellos</a>
+
+        </section>
+
+        <!-- =================================
+               BLOQUE COMPLETO CON FONDO NEGRO
+              ================================= -->
+
+        <div class="seccion-negra">
+
+            <!-- =========================
+                 INFORMACIÓN NOCHE
+               ========================== -->
+
+            <h2 class="zombies-noche">
+                <span class="verde-titulo">NIEBLA</span>
+            </h2>
+
+            <section class="piscina-noche">
+
+                <div class="piscina-noche-texto">
+
+                    <p>
+                        Cuando cae la noche, el escenario de la piscina se transforma por completo.
+                        Conserva las mismas dos líneas acuáticas y terrestres de la versión diurna, una
+                        densa niebla cubre el jardín y limita considerablemente la visión del jugador.
+                    </p>
+
+                    <p>
+                        La principal desventaja de este escenario es que los zombis permanecen ocultos
+                        hasta que se encuentran mucho más cerca de las plantas, dificultando anticipar
+                        sus ataques y planear una defensa adecuada.
+                    </p>
+
+                    <p>
+                        En el Modo Aventura, la niebla se acerca cada nivel para facilitar la adaptación
+                        del jugador, pero en su punto máximo, solo deja visibles las tres primeras
+                        columnas. La música que suena principalmente en esta fase es "Rigor Mormist".
+                    </p>
+
+                </div>
+
+                <div class="piscina-noche-imagen">
+                    <img src="img/piscina/piscina2.jpg" alt="Piscina durante la noche">
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+         PLANTAS
+    ========================== -->
+
+            <section class="plantas-noche">
+
+                <h2>
+                    <span class="verde-titulo">PLANTAS</span> DE ESTE NIVEL
+                </h2>
+
+                <div class="plantas-grid">
+
+                    <img src="img/piscina/planterna.png" alt="planterna">
+                    <img src="img/piscina/cactus.png" alt="cactus">
+                    <img src="img/piscina/trebolador.png" alt="trebolador">
+                    <img src="img/piscina/bipetidora.png" alt="bipetidora">
+
+                    <img src="img/piscina/frustrella.png" alt="frustrella">
+                    <img src="img/piscina/calabaza.png" alt="calabaza">
+                    <img src="img/piscina/magnetoseta.png" alt="magnetoseta">
+                    <img src="img/piscina/coltapulta.png" alt="coltapulta">
+
+                </div>
+
+
+
+                <a href="enciclopedia-zombi.html" class="boton-redireccion">
+                    Quiero saber más de ellos
+                </a>
+
+            </section>
+
+
+            <!-- =========================
+                  ZOMBIES
+             ========================== -->
+
+            <section class="zombies-noche">
+
+                <h2>
+                    <span class="verde-titulo">ZOMBIES</span> DE ESTE NIVEL
+                </h2>
+
+                <div class="zombies-grid">
+
+                    <img src="img/piscina/cajita.png" alt="Zombie con cajita">
+                    <img src="img/piscina/globo.png" alt="Zombie con globo">
+                    <img src="img/piscina/picado.png" alt="Zombi picado">
+                    <img src="img/piscina/saltarin.png" alt="zombi saltarin">
+                    <img src="img/piscina/yeti.png" alt="zombi yeti">
+
+                </div>
+
+                <a href="enciclopedia-zombi.html" class="boton-redireccion">
+                    Quiero saber más de ellos
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- =====================================================
+         COLLAGE + FOOTER
+    ====================================================== -->
+
+    <section class="bottom-section">
+
+        <img src="img/collage.png" alt="Collage de Plants vs. Zombies" class="collage">
+
+        <footer class="pvz-footer">
+
+            <div class="pvz-footer-container">
+
+                <div class="pvz-footer-info">
+
+                    <p class="pvz-footer-title">
+                        The Garden Archive
+                    </p>
+
+                    <p>
+                        Proyecto académico
+                    </p>
+
+                    <div class="pvz-footer-images">
+
+                        <img src="img/dani.png" alt="Logo Dani">
+
+                        <img src="img/valen.png" alt="Logo Valen">
+
+                    </div>
+
+                    <p>
+                        Plants vs. Zombies © PopCap Games / Electronic Arts.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Este proyecto es de carácter académico y no comercial.
+                        </strong>
+                    </p>
+
+                </div>
+
+                <a href="pvz2.html" class="pvz-footer-button" target="_blank" rel="noopener noreferrer">
+                    Plantas vs. Zombies 2
+                </a>
+
+            </div>
+
+        </footer>
+
+    </section>
+
+    <div id="visor-imagen" class="visor-imagen">
+
+        <span class="cerrar-visor">&times;</span>
+
+        <img id="imagen-grande" src="" alt="Vista ampliada">
+
+    </div>
+
+    <script src="js/piscina.js"></script>
+
+</body>
+
+</html>

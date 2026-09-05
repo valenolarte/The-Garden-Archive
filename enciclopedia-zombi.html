@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Garden Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/enciclopedias.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         CABEZOTE / NAVEGACIÓN
+    ====================================================== -->
+
+    <header class="header">
+
+        <a href="inicio.html" class="logo">
+            <img src="img/logo.png" alt="Plantas vs. Zombies">
+        </a>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icon">
+            ☰
+        </label>
+
+        <nav class="menu">
+
+            <!-- PERSONAJES -->
+
+            <div class="menu-desplegable">
+
+                <a href="#" class="boton-menu">
+                    Personajes
+                </a>
+
+                <div class="submenu">
+
+                    <a href="enciclopedia-plantas.html">Plantas</a>
+                    <a href="enciclopedia-zombi.html">Zombies</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- NIVELES -->
+
+            <div class="menu-desplegable">
+
+                <a href="#" class="boton-menu">
+                    Niveles
+                </a>
+
+                <div class="submenu">
+
+                    <a href="dia.html">Día</a>
+                    <a href="noche.html">Noche</a>
+                    <a href="piscina.html">Piscina</a>
+                    <a href="tejado.html">Tejado</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- GALERÍA -->
+
+            <a href="galeria.html">
+                Galería
+            </a>
+
+
+            <!-- GUÍA -->
+
+            <div class="menu-desplegable">
+
+                <a href="#" class="boton-menu">
+                    Guía
+                </a>
+
+                <div class="submenu">
+
+                    <a href="consejos.html">Consejos</a>
+                    <a href="tiendadedave.html">Tienda de Dave</a>
+
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         LIBRO DE PERSONAJES
+    ====================================================== -->
+
+    <main class="book-container" id="inicio">
+
+        <div class="book-frame">
+
+            <div class="book-content">
+
+
+                <!-- PÁGINA IZQUIERDA -->
+
+                <section class="page page-left">
+
+                    <div class="character-detail">
+
+                        <div class="portrait-frame">
+
+                            <img id="detail-img" src="img/personajes/1zombie.png" alt="Personaje seleccionado">
+
+                        </div>
+
+                        <div class="character-info">
+
+                            <h1 id="detail-title">
+                                Zombie
+                            </h1>
+
+                            <p id="detail-desc">
+                                Es un Zombi de jardín común, cuenta con 270 Hp, su velocidad es normal/lenta. Le
+                                encantan los cerebros. No se cansa de ellos. Cerebros, cerebros, Cerebros, todo el día.
+                                Cerebros viejos, cerebros frescos, cerebros pasados, cerebros hipotecados… No importa, a
+                                él le enloquecen.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- PÁGINA DERECHA -->
+
+                <section class="page page-right">
+
+                    <h2 class="section-title">
+                        Personajes
+                    </h2>
+
+                    <div class="character-grid-scroll">
+
+                        <div id="character-grid" class="character-grid">
+                            <!-- JavaScript colocará aquí los personajes -->
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         COLLAGE + FOOTER
+    ====================================================== -->
+
+    <section class="bottom-section">
+
+        <img src="img/collage.png" alt="Collage de Plants vs. Zombies" class="collage">
+
+        <footer class="pvz-footer">
+
+            <div class="pvz-footer-container">
+
+                <div class="pvz-footer-info">
+
+                    <p class="pvz-footer-title">
+                        The Garden Archive
+                    </p>
+
+                    <p>
+                        Proyecto académico
+                    </p>
+
+                    <div class="pvz-footer-images">
+
+                        <img src="img/dani.png" alt="Logo Dani">
+
+                        <img src="img/valen.png" alt="Logo Valen">
+
+                    </div>
+
+                    <p>
+                        Plants vs. Zombies © PopCap Games / Electronic Arts.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Este proyecto es de carácter académico y no comercial.
+                        </strong>
+                    </p>
+
+                </div>
+
+                <a href="pvz2.html" class="pvz-footer-button"
+                    target="_blank" rel="noopener noreferrer">
+                    Plantas vs. Zombies 2
+                </a>
+
+            </div>
+
+        </footer>
+
+    </section>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/zombis.js"></script>
+
+</body>
+
+</html>
